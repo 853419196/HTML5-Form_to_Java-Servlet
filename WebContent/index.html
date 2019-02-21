@@ -1,0 +1,630 @@
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>HTML Forms</title>
+    </head>
+    <body>
+        <header>
+            <h1>HTML <a href="https://developer.mozilla.org/docs/Learn/HTML/Forms">Forms</a></h1><hr/>
+            <ul>
+                <li>
+                    <details open>
+                        <summary><a href="#1">Element form</a></summary>
+                        <ul>
+                            <li>
+                                <details>
+                                    <summary><a href="#1.1">Element button</a></summary>
+                                    <ul>
+                                        <li><a href="#1.1.1">Button button</a></li>
+                                        <li><a href="#1.1.2">Button reset</a></li>
+                                        <li><a href="#1.1.3">Button submit</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <a href="#1.2">Element datalist</a>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a href="#1.3">Element input</a></summary>
+                                    <ul>
+                                        <li><a href="#1.3.01">Input button</a></li>
+                                        <li><a href="#1.3.02">Input checkbox</a></li>
+                                        <li><a href="#1.3.03">Input color</a></li>
+                                        <li><a href="#1.3.04">Input date</a></li>
+                                        <li>
+                                            <a href="#1.3.05">Input datetime</a>
+                                            <abbr title="Warning: The type is error!">🚫</abbr>
+                                        </li>
+                                        <li><a href="#1.3.06">Input datetime-local</a></li>
+                                        <li><a href="#1.3.07">Input email</a></li>
+                                        <li><a href="#1.3.08">Input file</a></li>
+                                        <li><a href="#1.3.09">Input hidden</a></li>
+                                        <li><a href="#1.3.10">Input image</a></li>
+                                        <li><a href="#1.3.11">Input month</a></li>
+                                        <li><a href="#1.3.12">Input number</a></li>
+                                        <li><a href="#1.3.13">Input password</a></li>
+                                        <li><a href="#1.3.14">Input radio</a></li>
+                                        <li><a href="#1.3.15">Input range</a></li>
+                                        <li><a href="#1.3.16">Input reset</a></li>
+                                        <li><a href="#1.3.17">Input search</a></li>
+                                        <li><a href="#1.3.18">Input submit</a></li>
+                                        <li><a href="#1.3.19">Input tel</a></li>
+                                        <li><a href="#1.3.20">Input text</a></li>
+                                        <li><a href="#1.3.21">Input time</a></li>
+                                        <li><a href="#1.3.22">Input url</a></li>
+                                        <li><a href="#1.3.23">Input week</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a href="#1.4">Element select</a></summary>
+                                    <ul>
+                                        <li><a href="#1.4.1">Element optgroup</a></li>
+                                        <li><a href="#1.4.2">Element option</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <a href="#1.5">Element textarea</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul><hr/>
+        </header>
+        <section id="1">
+            <h2>Element <a href="https://developer.mozilla.org/docs/Web/HTML/Element/form">form</a></h2>
+            <section id="1.1">
+                <h3>Element <a href="https://developer.mozilla.org/docs/Web/HTML/Element/button">button</a></h3>
+                <section id="1.1.1">
+                    <h4>Button button</h4>
+                    <form>
+                        <fieldset>
+                            <legend>Button</legend>
+                            <label>button:<button type="button">Button</button></label>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.1.2">
+                    <h4>Button reset</h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <p>
+                                <label>input:<input name="inputName"/></label>
+                            </p>
+                            <fieldset>
+                                <legend>Button</legend>
+                                <label>reset:<button type="reset">Reset</button></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.1.3">
+                    <h4>Button submit</h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <p>
+                                <label>input:<input name="inputName"/></label>
+                            </p>
+                            <fieldset>
+                                <legend>Button</legend>
+                                <label>submit:<button type="submit" name="submitName" value="submitValue">Submit</button></label>
+                            </fieldset>
+                            <p>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+            </section>
+            <section id="1.2">
+                <h3>Element <a href="https://developer.mozilla.org/docs/Web/HTML/Element/datalist">datalist</a></h3>
+                <form action="http://localhost:8080/Main/form">
+                    <fieldset>
+                        <fieldset>
+                            <legend>Datalist</legend>
+                            <label>input:<input name="inputName" list="datalistID"/></label>
+                            <datalist id="datalistID">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </datalist>
+                        </fieldset>
+                        <p>
+                            <input type="submit"/>
+                            <input type="reset"/>
+                        </p>
+                    </fieldset>
+                </form>
+                <details>
+                    <summary>Safari browser: Datalist -> Input &amp; Select</summary>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <legend>Safari</legend>
+                            <fieldset>
+                                <legend>Input &amp; Select</legend>
+                                <label>input:<input name="inputName" list="datalistID"/></label>
+                                <datalist id="datalistID">or
+                                    <label>select:
+                                        <select name="selectName">
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </label>
+                                </datalist>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </details>
+            </section>
+            <section id="1.3">
+                <h3>Element <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input">input</a></h3>
+                <section id="1.3.01">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/button">button</a></h4>
+                    <form>
+                        <fieldset>
+                            <legend>Input</legend>
+                            <label>button:<input type="button" value="buttonValue"/></label>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.02">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/checkbox">checkbox</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>checkbox:<input type="checkbox" name="checkboxName" value="checkboxValue"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.03">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/color">color</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>color:<input type="color" name="colorName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.04">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/date">date</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>date:<input type="date" name="dateName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.05">
+                    <h4>
+                        Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/datetime">datetime</a>
+                        <abbr title="Warning: The type is error!">🚫</abbr>
+                    </h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>datetime:<input type="datetime" name="datetimeName"/></label>
+                                <abbr title="Warning: The type is error!">🚫</abbr>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.06">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>datetime-local:<input type="datetime-local" name="datetime-localName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.07">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/email">email</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>email:<input type="email" name="emailName"/></label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Multiple Input</legend>
+                                <label>multiple email:<input multiple type="email" name="multipleEmailName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.08">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/file">file</a></h4>
+                    <form action="http://localhost:8080/Main/form" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>file:<input type="file" name="fileName"/></label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Multiple Input</legend>
+                                <label>multiple file:<input multiple type="file" name="multipleFileName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.09">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/hidden">hidden</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>hidden:<input type="hidden" name="hiddenName" value="hiddenValue"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.10">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/image">image</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <p>
+                                <label>input:<input name="inputName"/></label>
+                            </p>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>image:<br/>
+                                    <input type="image" name="imageName" src="https://www.google.cn/landing/cnexp/google-search.png"/>
+                                </label>
+                            </fieldset>
+                            <p>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.11">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/month">month</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>month:<input type="month" name="monthName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.12">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/number">number</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>number:<input type="number" name="numberName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.13">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/password">password</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>password:<input type="password" name="passwordName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.14">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/radio">radio</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                radio:<br/>&nbsp;&nbsp;&nbsp;
+                                <label>Yes:<input type="radio" name="radioName" value="yes"/></label>
+                                <label>No:<input type="radio" name="radioName" value="no"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.15">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/range">range</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>range:<input type="range" name="rangeName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.16">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/reset">reset</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <p>
+                                <label>input:<input name="inputName"/></label>
+                            </p>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>reset:<input type="reset" value="resetValue"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.17">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/search">search</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>search:<input type="search" name="searchName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.18">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/submit">submit</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <p>
+                                <label>input:<input name="inputName"/></label>
+                            </p>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>submit:<input type="submit" name="submitName" value="submitValue"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.19">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/tel">tel</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>tel:<input type="tel" name="telName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.20">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/text">text</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>text:<input type="text" name="textName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.21">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/time">time</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>time:<input type="time" name="timeName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.22">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/url">url</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>url:<input type="url" name="urlName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.3.23">
+                    <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/week">week</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Input</legend>
+                                <label>week:<input type="week" name="weekName"/></label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+            </section>
+            <section id="1.4">
+                <h3>Element <a href="https://developer.mozilla.org/docs/Web/HTML/Element/select">select</a></h3>
+                <section id="1.4.1">
+                    <h4>Element <a href="https://developer.mozilla.org/docs/Web/HTML/Element/optgroup">optgroup</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Select</legend>
+                                <label>select:
+                                    <select name="selectName">
+                                        <optgroup label="Yes/No">
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </optgroup>
+                                        <optgroup label="True/False">
+                                            <option value="true">True</option>
+                                            <option value="false">False</option>
+                                        </optgroup>
+                                    </select>
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Multiple Select</legend>
+                                <label>multiple select:<br/>
+                                    <select multiple name="multipleSelectName">
+                                        <optgroup label="Number">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </optgroup>
+                                        <optgroup label="Alphabet">
+                                            <option value="a">A</option>
+                                            <option value="b">B</option>
+                                            <option value="c">C</option>
+                                        </optgroup>
+                                    </select>
+                                </label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="1.4.2">
+                    <h4>Element <a href="https://developer.mozilla.org/docs/Web/HTML/Element/option">option</a></h4>
+                    <form action="http://localhost:8080/Main/form">
+                        <fieldset>
+                            <fieldset>
+                                <legend>Select</legend>
+                                <label>select:
+                                    <select name="selectName">
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Multiple Select</legend>
+                                <label>multiple select:<br/>
+                                    <select multiple name="multipleSelectName">
+                                        <option value="a">A</option>
+                                        <option value="b">B</option>
+                                        <option value="c">C</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+                            <p>
+                                <input type="submit"/>
+                                <input type="reset"/>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+            </section>
+            <section id="1.5">
+                <h3>Element <a href="https://developer.mozilla.org/docs/Web/HTML/Element/textarea">textarea</a></h3>
+                <form action="http://localhost:8080/Main/form">
+                    <fieldset>
+                        <fieldset>
+                            <legend>Textarea</legend>
+                            <label>textarea:<br/>
+                                <textarea name="textareaName">Textarea</textarea>
+                            </label>
+                        </fieldset>
+                        <p>
+                            <input type="submit"/>
+                            <input type="reset"/>
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+        </section>
+        <footer>
+            <hr/><a href="#">Return</a>
+            <a href="#top">Top</a>
+        </footer>
+    </body>
+</html>
