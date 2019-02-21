@@ -1,0 +1,15 @@
+<web-app>
+    <display-name>Main</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>myServlet</servlet-name>
+        <servlet-class>my.MyServlet</servlet-class>
+        <multipart-config></multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>myServlet</servlet-name>
+        <url-pattern>/form</url-pattern>
+    </servlet-mapping>
+</web-app>
