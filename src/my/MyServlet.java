@@ -11,12 +11,7 @@ public class MyServlet extends HttpServlet
         response.setContentType("text/plain;charset=UTF-8");
         PrintWriter iPrintWrite=response.getWriter();
         iPrintWrite.println("Get form:");
-        for(Enumeration<String> e=request.getParameterNames(); e.hasMoreElements();)
-        {
-            String name=e.nextElement();
-            List<String> value=Arrays.asList(request.getParameterValues(name));
-            iPrintWrite.printf("%s: %s%n",name,value);
-        }
+        request.getParameterMap().forEach((name,values)->iPrintWrite.printf("    %s: %s%n",name,Arrays.asList(values)));
     }
     protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException
     {
@@ -24,19 +19,15 @@ public class MyServlet extends HttpServlet
         response.setContentType("text/plain;charset=UTF-8");
         PrintWriter iPrintWrite=response.getWriter();
         iPrintWrite.println("Post form:");
-        for(Enumeration<String> e=request.getParameterNames(); e.hasMoreElements();)
-        {
-            String name=e.nextElement();
-            List<String> value=Arrays.asList(request.getParameterValues(name));
-            iPrintWrite.printf("%s: %s%n",name,value);
-        }
+        request.getParameterMap().forEach((name,values)->iPrintWrite.printf("    %s: %s%n",name,Arrays.asList(values)));
         iPrintWrite.println("Post files:");
         Collection<Part> iCollection=request.getParts();
         for(Part iPart:iCollection)
         {
-            String name=iPart.getSubmittedFileName();
-            iPrintWrite.printf("name: %s, size: %d%n",name,iPart.getSize());
-            iPart.write("D:\\Temp\\"+name);
+            String name=iPart.getName();
+            String fileName=iPart.getSubmittedFileName();
+            iPrintWrite.printf("    %s:%n        File Name: %s, Size: %d%n",name,fileName,iPart.getSize());
+            iPart.write("D:\\Temp\\"+fileName);
         }
     }
 }
