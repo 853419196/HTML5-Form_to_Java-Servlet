@@ -252,7 +252,7 @@
                 </section>
                 <section id="1.3.08">
                     <h4>Input <a href="https://developer.mozilla.org/docs/Web/HTML/Element/input/file">file</a></h4>
-                    <form action="http://localhost:8080/Main/form"" method="post" enctype="multipart/form-data">
+                    <form action="http://localhost:8080/Main/form" method="post" enctype="multipart/form-data">
                         <fieldset>
                             <fieldset>
                                 <legend>Input</legend>
@@ -370,7 +370,11 @@
                         <fieldset>
                             <fieldset>
                                 <legend>Input</legend>
-                                <label>range:<input type="range" name="rangeName"/></label>
+                                <label>range:<input id="rangeID" type="range" name="rangeName" oninput="outputID.value=this.value"/></label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Output</legend>
+                                <label>output:<output id="outputID" for="rangeID">Output</output></label>
                             </fieldset>
                             <p>
                                 <input type="submit"/>
