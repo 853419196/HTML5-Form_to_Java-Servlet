@@ -241,7 +241,7 @@
                             </fieldset>
                             <fieldset>
                                 <legend>Multiple Input</legend>
-                                <label>multiple email:<input multiple type="email" name="multipleEmailName" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('e.g. name@example.com, name@example.net, name@example.org, name@example.edu')"/></label>
+                                <label>multiple email:<input multiple type="email" name="multipleEmailName" oninput="this.setCustomValidity('')" onchange="this.reportValidity()" oninvalid="this.setCustomValidity('e.g. name@example.com, name@example.net, name@example.org, name@example.edu')"/></label>
                             </fieldset>
                             <p>
                                 <input type="submit"/>
